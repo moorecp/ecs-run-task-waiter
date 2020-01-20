@@ -57,7 +57,7 @@ function assertRequiredArgumentsSet() {
 
 function buildLogStreamName() {
   task_arn=$1
-  task_id="$(echo $task_arn | awk -F / '{print $2}')"
+  task_id="$(echo $task_arn | awk -F / '{print $NF}')"
   container_name=$2
   prefix=$3
   echo "${prefix}/${container_name}/${task_id}"

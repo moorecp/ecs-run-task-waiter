@@ -7,9 +7,8 @@ VERSION=0.2.0
 # default values
 OUTPUT_LOG=false
 TIMEOUT=600
-AWS_CLI=$(which aws)
-AWS_ECS="$AWS_CLI --output json ecs"
-AWS_LOGS="$AWS_CLI --output json logs"
+AWS_ECS="aws --output json ecs"
+AWS_LOGS="aws --output json logs"
 VERBOSE=false
 
 function usage() {
